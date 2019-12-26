@@ -1,12 +1,12 @@
 package com.ivanalvarado.template.di.module
 
 import android.app.Application
+import androidx.room.Room
 import com.ivanalvarado.template.database.AppDatabase
-import javax.inject.Singleton
-import dagger.Provides
-import android.arch.persistence.room.Room
 import com.ivanalvarado.template.database.dao.ExampleDao
 import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
 
 
 @Module
@@ -19,7 +19,8 @@ class DbModule {
     @Singleton
     internal fun provideDatabase(application: Application): AppDatabase {
         return Room.databaseBuilder(
-            application, AppDatabase::class.java, "Entertainment.db")
+            application, AppDatabase::class.java, "AndroidBootstrap.db"
+        )
             .allowMainThreadQueries().build()
     }
 

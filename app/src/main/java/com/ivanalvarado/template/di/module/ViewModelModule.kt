@@ -1,7 +1,7 @@
 package com.ivanalvarado.template.di.module
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.ivanalvarado.template.di.ViewModelFactory
 import com.ivanalvarado.template.di.ViewModelKey
 import com.ivanalvarado.template.viewmodel.ExampleViewModel

@@ -1,9 +1,9 @@
 package com.ivanalvarado.template
 
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.ivanalvarado.template.viewmodel.ExampleViewModel
 import dagger.android.AndroidInjection
 import javax.inject.Inject
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpViewModel() {
-        exampleViewModel = ViewModelProviders.of(this, viewModelFactory).get(ExampleViewModel::class.java)
+        exampleViewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(ExampleViewModel::class.java)
     }
 }

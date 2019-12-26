@@ -1,6 +1,6 @@
 package com.ivanalvarado.template.database.entity
 
-import android.arch.persistence.room.Entity
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
 @Entity(primaryKeys = ["id"])

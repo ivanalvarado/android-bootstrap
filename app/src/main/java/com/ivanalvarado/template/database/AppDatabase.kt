@@ -1,7 +1,7 @@
 package com.ivanalvarado.template.database
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.RoomDatabase
 import com.ivanalvarado.template.database.dao.ExampleDao
 import com.ivanalvarado.template.database.entity.ExampleEntity
 
