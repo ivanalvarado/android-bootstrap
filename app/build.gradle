@@ -29,13 +29,19 @@ ext {
     constraintLayoutVersion = '1.1.3'
     daggerVersion = '2.24'
     daggerAndroidVersion = '2.23'
+    daggerAssistedInjectVersion = '0.5.0'
+    epoxyVersion = '3.8.0'
     espressoVersion = '3.0.2'
     jUnitVersion = '4.12'
     lifecycleVersion = '2.1.0'
+    lottieVersion = '3.2.2'
     okhttpVersion = '4.2.1'
     picassoVersion = '2.71828'
     retrofitVersion = '2.6.1'
     roomVersion = '2.2.3'
+    rxBindingVersion = '3.0.0'
+    rxJavaVersion = '2.2.12'
+    rxKotlin = '2.4.0'
 }
 
 dependencies {
@@ -58,7 +64,15 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$daggerAndroidVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerAndroidVersion"
 
-    // Espresso
+    // Dagger AssistedInject - https://github.com/square/AssistedInject
+    compileOnly "com.squareup.inject:assisted-inject-annotations-dagger2:$daggerAssistedInjectVersion"
+    kapt "com.squareup.inject:assisted-inject-processor-dagger2:$daggerAssistedInjectVersion"
+
+    // Epoxy - https://github.com/airbnb/epoxy
+    implementation "com.airbnb.android:epoxy:$epoxyVersion"
+    kapt "com.airbnb.android:epoxy-processor:$epoxyVersion"
+
+    // Espresso - https://developer.android.com/training/testing/espresso
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
 
     // JUnit
@@ -66,6 +80,9 @@ dependencies {
 
     // Lifecycle Aware Components - ViewModel & LiveData - https://developer.android.com/jetpack/androidx/releases/lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+
+    // Lottie - https://airbnb.io/lottie/#/README
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
     // OkHttp - https://square.github.io/okhttp/
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
@@ -82,6 +99,17 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.room:room-rxjava2:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
+
+    // RxBinding - https://github.com/JakeWharton/RxBinding
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-core:$rxBindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxBindingVersion"
+
+    // RxJava - https://github.com/ReactiveX/RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    // RxKotlin - https://github.com/ReactiveX/RxKotlin
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
 
     /* Add Kotlin support */
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31'
