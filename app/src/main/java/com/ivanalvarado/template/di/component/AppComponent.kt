@@ -2,9 +2,7 @@ package com.ivanalvarado.template.di.component
 
 import android.app.Application
 import com.ivanalvarado.template.AppController
-import com.ivanalvarado.template.di.module.ActivityModule
-import com.ivanalvarado.template.di.module.ApiModule
-import com.ivanalvarado.template.di.module.DbModule
+import com.ivanalvarado.template.di.module.*
 import com.ivanalvarado.template.di.module.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
@@ -21,7 +19,9 @@ import javax.inject.Singleton
  * */
 @Component(
     modules = [
-        ApiModule::class,
+        NetworkModule::class,
+        LoggingModule::class,
+        ServiceModule::class,
         DbModule::class,
         ViewModelModule::class,
         ActivityModule::class,
@@ -35,7 +35,7 @@ interface AppComponent {
      * This will set our application object to the AppComponent.
      * So inside the AppComponent the application instance is available.
      * So this application instance can be accessed by our modules
-     * such as ApiModule when needed
+     * such as NetworkModule when needed
      *
      * */
     @Component.Builder

@@ -3,7 +3,6 @@ package com.ivanalvarado.template.di.module
 import android.app.Application
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.ivanalvarado.template.network.services.ExampleApiService
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -17,12 +16,9 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 
-@Module
-class ApiModule {
+@Module(includes = [LoggingModule::class])
+class NetworkModule {
 
-    /*
-     * The method returns the Gson object
-     * */
     @Provides
     @Singleton
     internal fun provideGson(): Gson {
@@ -30,10 +26,6 @@ class ApiModule {
         return gsonBuilder.create()
     }
 
-
-    /*
-     * The method returns the Cache object
-     * */
     @Provides
     @Singleton
     internal fun provideCache(application: Application): Cache {
@@ -42,29 +34,22 @@ class ApiModule {
         return Cache(httpCacheDirectory, cacheSize)
     }
 
-
-    /*
-     * The method returns the Okhttp object
-     * */
     @Provides
     @Singleton
-    internal fun provideOkhttpClient(cache: Cache): OkHttpClient {
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
+    internal fun provideOkhttpClient(
+        cache: Cache,
+        loggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient {
 
-        val httpClient = OkHttpClient.Builder()
-        httpClient.cache(cache)
-        httpClient.addInterceptor(logging)
-//        httpClient.addNetworkInterceptor(RequestInterceptor())
-        httpClient.connectTimeout(30, TimeUnit.SECONDS)
-        httpClient.readTimeout(30, TimeUnit.SECONDS)
-        return httpClient.build()
+        val okHttpClient = OkHttpClient.Builder()
+        okHttpClient.cache(cache)
+        okHttpClient.addInterceptor(loggingInterceptor)
+        okHttpClient.callTimeout(60, TimeUnit.SECONDS)
+        okHttpClient.connectTimeout(60, TimeUnit.SECONDS)
+        okHttpClient.readTimeout(60, TimeUnit.SECONDS)
+        return okHttpClient.build()
     }
 
-
-    /*
-     * The method returns the Retrofit object
-     * */
     @Provides
     @Singleton
     internal fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit {
@@ -74,18 +59,5 @@ class ApiModule {
             .baseUrl("https://api.themoviedb.org/3/")
             .client(okHttpClient)
             .build()
-    }
-
-
-    /*
-     * We need the MovieApiService module.
-     * For this, We need the Retrofit object, Gson, Cache and OkHttpClient .
-     * So we will define the providers for these objects here in this module.
-     *
-     * */
-    @Provides
-    @Singleton
-    internal fun provideExampleApiService(retrofit: Retrofit): ExampleApiService {
-        return retrofit.create(ExampleApiService::class.java)
     }
 }
