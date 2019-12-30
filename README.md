@@ -10,6 +10,7 @@ Android Bootstrap is an Android project with some of the most popular Android li
 - [Espresso](https://developer.android.com/training/testing/espresso): Library that helps write Android UI tests.
 - [Lifecycle Components](https://developer.android.com/jetpack/androidx/releases/lifecycle): ViewModel & LiveData help perform actions in response to a change in the lifecycle status of another component, such as activities and fragments.
 - [Lottie](https://airbnb.io/lottie/#/README): Lottie is a library for Android, iOS, Web, and Windows that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile and on the web.
+- [MvRx](https://github.com/airbnb/MvRx): MvRx provides a framework that makes Android screens, from the simplest to the most complex, easier to write.
 - [OkHttp](https://square.github.io/okhttp/): Networking library.
 - [Picasso](https://square.github.io/picasso/): An image downloading and caching library for Android.
 - [Retrofit](https://square.github.io/retrofit/): A type-safe HTTP client for Android and Java.
