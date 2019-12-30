@@ -14,19 +14,27 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+//            buildConfigField "String", "NASA_IMAGERY_URL", "\"https://images-api.nasa.gov\""
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 ext {
     androidSupportVersion = '28.0.0'
     constraintLayoutVersion = '1.1.3'
+    cardViewVersion = '28.0.0'
     daggerVersion = '2.24'
     daggerAndroidVersion = '2.23'
     daggerAssistedInjectVersion = '0.5.0'
@@ -35,7 +43,9 @@ ext {
     jUnitVersion = '4.12'
     lifecycleVersion = '2.1.0'
     lottieVersion = '3.2.2'
-    okhttpVersion = '4.2.1'
+    mockitoVersion = '3.1.0'
+    mvrxVersion = '1.3.0'
+    okHttpVersion = '4.2.1'
     picassoVersion = '2.71828'
     retrofitVersion = '2.6.1'
     roomVersion = '2.2.3'
@@ -44,16 +54,26 @@ ext {
     rxKotlin = '2.4.0'
 }
 
+repositories {
+    jcenter()
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Android Support Library
-    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
-    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
-    implementation "com.android.support:design:$androidSupportVersion"
-    implementation "com.android.support:cardview-v7:$androidSupportVersion"
-    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    // CardView
+    implementation "com.android.support:cardview-v7:$cardViewVersion"
 
     // Dagger - https://github.com/google/dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
@@ -72,20 +92,22 @@ dependencies {
     implementation "com.airbnb.android:epoxy:$epoxyVersion"
     kapt "com.airbnb.android:epoxy-processor:$epoxyVersion"
 
-    // Espresso - https://developer.android.com/training/testing/espresso
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
-
-    // JUnit
-    testImplementation "junit:junit:$jUnitVersion"
-
-    // Lifecycle Aware Components - ViewModel & LiveData - https://developer.android.com/jetpack/androidx/releases/lifecycle
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
-
     // Lottie - https://airbnb.io/lottie/#/README
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+
+    // MockWebServer
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+
+    // MvRx
+    implementation "com.airbnb.android:mvrx:$mvrxVersion"
+
     // OkHttp - https://square.github.io/okhttp/
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
 
     // Picasso - https://square.github.io/picasso/
     implementation "com.squareup.picasso:picasso:$picassoVersion"
@@ -111,6 +133,6 @@ dependencies {
     // RxKotlin - https://github.com/ReactiveX/RxKotlin
     implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
 
-    /* Add Kotlin support */
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31'
+    implementation "androidx.activity:activity-ktx:1.0.0-alpha06"
+    implementation "androidx.fragment:fragment-ktx:1.1.0-alpha06"
 }
