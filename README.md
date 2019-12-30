@@ -1,6 +1,13 @@
 # Android Bootstrap
 Android Bootstrap is an Android project with some of the most popular Android libraries already included, as well as, dependency injection set up with Dagger. This is intended to help you save time so that you can start writing features ASAP.
 
+## Compatibility
+```gradle
+compileSdkVersion 28
+minSdkVersion 22
+targetSdkVersion 28
+```
+
 ## Libraries
 - [ConstraintLayout](https://developer.android.com/training/constraint-layout): Allows you to create large and complex layouts with a flat view hierarchy (no nested view groups).
 - [Dagger](https://github.com/google/dagger): A fast dependency injector for Android and Java.
