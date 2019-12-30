@@ -18,7 +18,7 @@ android {
     }
     buildTypes {
         debug {
-//            buildConfigField "String", "NASA_IMAGERY_URL", "\"https://images-api.nasa.gov\""
+            buildConfigField "String", "BASE_URL", "\"https://base.url.com\""
         }
 
         release {

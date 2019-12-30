@@ -3,6 +3,7 @@ package com.ivanalvarado.template.di.module
 import android.app.Application
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.ivanalvarado.template.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -36,7 +37,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    internal fun provideOkhttpClient(
+    internal fun provideOkHttpClient(
         cache: Cache,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
@@ -56,7 +57,7 @@ class NetworkModule {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .baseUrl("https://api.themoviedb.org/3/")
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .build()
     }
