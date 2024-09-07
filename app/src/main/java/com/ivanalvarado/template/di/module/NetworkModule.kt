@@ -16,6 +16,7 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+private const val BASE_URL = "https://base.url.com"
 
 @Module(includes = [LoggingModule::class])
 class NetworkModule {
@@ -57,7 +58,7 @@ class NetworkModule {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .build()
     }
