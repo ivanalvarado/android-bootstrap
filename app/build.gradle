@@ -27,30 +27,9 @@ android {
     }
 }
 
-ext {
-    androidSupportVersion = '28.0.0'
-    constraintLayoutVersion = '1.1.3'
-    cardViewVersion = '28.0.0'
-    daggerVersion = '2.24'
-    daggerAndroidVersion = '2.23'
-    daggerAssistedInjectVersion = '0.5.0'
-    epoxyVersion = '3.8.0'
-    espressoVersion = '3.0.2'
-    jUnitVersion = '4.12'
-    lifecycleVersion = '2.1.0'
-    lottieVersion = '3.2.2'
-    mockitoVersion = '3.1.0'
-    mvrxVersion = '1.3.0'
-    okHttpVersion = '4.2.1'
-    picassoVersion = '2.71828'
-    retrofitVersion = '2.6.1'
-    roomVersion = '2.2.3'
-    rxBindingVersion = '3.0.0'
-    rxJavaVersion = '2.2.12'
-    rxKotlin = '2.4.0'
-}
-
 repositories {
+    mavenCentral()
+    google()
     jcenter()
 }
 
@@ -61,74 +40,74 @@ kapt {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation libs.appcompat
+    implementation libs.core.ktx
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.runner
+    androidTestImplementation libs.espresso.core
 
     // CardView
-    implementation "com.android.support:cardview-v7:$cardViewVersion"
+    implementation libs.cardview
 
     // Dagger - https://github.com/google/dagger
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation libs.dagger
+    kapt libs.dagger.compiler
 
     // Dagger Android - https://developer.android.com/training/dependency-injection/dagger-android
-    implementation "com.google.dagger:dagger-android:$daggerAndroidVersion"
-    implementation "com.google.dagger:dagger-android-support:$daggerAndroidVersion"
-    kapt "com.google.dagger:dagger-android-processor:$daggerAndroidVersion"
+    implementation libs.dagger.android
+    implementation libs.dagger.android.support
+    kapt libs.dagger.android.processor
 
     // Dagger AssistedInject - https://github.com/square/AssistedInject
-    compileOnly "com.squareup.inject:assisted-inject-annotations-dagger2:$daggerAssistedInjectVersion"
-    kapt "com.squareup.inject:assisted-inject-processor-dagger2:$daggerAssistedInjectVersion"
+    compileOnly libs.assisted.inject.annotations.dagger2
+    kapt libs.assisted.inject.processor.dagger2
 
     // Epoxy - https://github.com/airbnb/epoxy
-    implementation "com.airbnb.android:epoxy:$epoxyVersion"
-    kapt "com.airbnb.android:epoxy-processor:$epoxyVersion"
+    implementation libs.airbnb.epoxy
+    kapt libs.airbnb.epoxy.processor
 
     // Lottie - https://airbnb.io/lottie/#/README
-    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation libs.airbnb.lottie
 
     // Mockito
-    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation libs.mockito.core
 
     // MockWebServer
-    testImplementation "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+    testImplementation libs.okhttp3.mockwebserver
 
     // MvRx
-    implementation "com.airbnb.android:mvrx:$mvrxVersion"
+    implementation libs.airbnb.mvrx
 
     // OkHttp - https://square.github.io/okhttp/
-    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
-    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation libs.okhttp3.okhttp
+    implementation libs.okhttp3.logging.interceptor
+    implementation libs.conscrypt.android
 
     // Picasso - https://square.github.io/picasso/
-    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation libs.picasso
 
     // Retrofit - https://square.github.io/retrofit/
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation libs.retrofit
+    implementation libs.retrofit.adapter.rxjava2
+    implementation libs.retrofit.converter.gson
 
     // Room - https://developer.android.com/training/data-storage/room/index.html
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-rxjava2:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation libs.androidx.room.runtime
+    implementation libs.androidx.room.rxjava2
+    kapt libs.androidx.room.compiler
 
     // RxBinding - https://github.com/JakeWharton/RxBinding
-    implementation "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion"
-    implementation "com.jakewharton.rxbinding3:rxbinding-core:$rxBindingVersion"
-    implementation "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxBindingVersion"
+    implementation libs.rxbinding
+    implementation libs.rxbinding.appcompat
+    implementation libs.rxbinding.core
 
     // RxJava - https://github.com/ReactiveX/RxJava
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation libs.rxjava
 
     // RxKotlin - https://github.com/ReactiveX/RxKotlin
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
+    implementation libs.rxkotlin
 
-    implementation "androidx.activity:activity-ktx:1.0.0-alpha06"
-    implementation "androidx.fragment:fragment-ktx:1.1.0-alpha06"
+    implementation libs.androidx.activity.ktx
+    implementation libs.androidx.fragment.ktx
 }
