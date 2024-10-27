@@ -19,34 +19,33 @@ This repository is a starter template for creating Android projects, preconfigur
 - **Best Practices**: Architected for scalability and readability, with a focus on MVVM.
 ## Included Libraries
 ### Core Libraries
-- **Kotlin Standard Library**: Leverages idiomatic Kotlin for cleaner, safer code.
-- **Coroutines**: Manages background threads and async operations.
+- [**Kotlin Standard Library**](https://kotlinlang.org/api/latest/jvm/stdlib/): Leverages idiomatic Kotlin for cleaner, safer code.
+- [**Coroutines**](https://kotlinlang.org/docs/coroutines-overview.html): Manages background threads and async operations.
 ### UI & Jetpack Components
-- **Jetpack Compose**: For building UI in a declarative way.
-- **Navigation Component**: Simplifies navigation between screens.
-- **Lifecycle Components**: Manages UI lifecycle states.
-- **Paging**: For efficient pagination of data.
+- [**Jetpack Compose**](https://developer.android.com/compose): For building UI in a declarative way.
+- [**Navigation Component**](https://developer.android.com/guide/navigation): Simplifies navigation between screens.
+- [**Lifecycle Components**](https://developer.android.com/jetpack/androidx/releases/lifecycle): Manages UI lifecycle states.
+- [**Paging**](https://developer.android.com/topic/libraries/architecture/paging/v3-overview): For efficient pagination of data.
 ### Networking & Data
-- **Retrofit**: HTTP client for API calls.
-- **OkHttp**: Lower-level HTTP client for advanced networking capabilities.
-- **Moshi**: JSON parser optimized for Kotlin.
-- **Room**: Database management with SQLite abstraction.
-- **DataStore**: Lightweight, key-value storage solution.
+- [**Retrofit**](https://github.com/square/retrofit): HTTP client for API calls.
+- [**OkHttp**](https://github.com/square/okhttp): Lower-level HTTP client for advanced networking capabilities.
+- [**Moshi**](https://github.com/square/moshi): JSON parser optimized for Kotlin.
+- [**Room**](https://developer.android.com/jetpack/androidx/releases/room): Database management with SQLite abstraction.
+- [**DataStore**](https://developer.android.com/jetpack/androidx/releases/datastore): Lightweight, key-value storage solution.
 ### Dependency Injection
-- **Hilt**: Simplifies dependency injection.
+- [**Hilt**](https://developer.android.com/training/dependency-injection/hilt-android): Simplifies dependency injection.
 ### UI and Image Loading
-- **Material Components**: UI components adhering to Material Design.
-- **Coil**: Fast, modern image loading library.
+- [**Material Components**](https://developer.android.com/design/ui/mobile/guides/components/material-overview): UI components adhering to Material Design.
+- [**Coil**](https://github.com/coil-kt/coil): Fast, modern image loading library.
 ### Testing
-- **JUnit**: Standard unit testing framework.
-- **Mockk**: Mocking library for Kotlin.
-- **Espresso**: UI testing for Android.
-- **Truth**: Provides readable assertions for tests.
+- [**JUnit**](https://developer.android.com/training/testing/local-tests): Standard unit testing framework.
+- [**Mockk**](https://mockk.io/): Mocking library for Kotlin.
+- [**Espresso**](https://developer.android.com/training/testing/espresso): UI testing for Android.
+- [**Truth**](https://github.com/google/truth): Provides readable assertions for tests.
 ### Utilities
-- **Timber**: Flexible logging.
-- **LeakCanary**: Memory leak detection.
-- **Firebase Analytics**: Tracks user events and app usage.
-- **WorkManager**: Manages background tasks with lifecycle awareness.
+- [**Timber**](https://github.com/JakeWharton/timber): Flexible logging.
+- [**LeakCanary**](https://square.github.io/leakcanary/): Memory leak detection.
+- [**WorkManager**](https://developer.android.com/develop/background-work/background-tasks/persistent/getting-started): Manages background tasks with lifecycle awareness.
 ## Getting Started
 ### Prerequisites
 - **Android Studio** Arctic Fox or later
