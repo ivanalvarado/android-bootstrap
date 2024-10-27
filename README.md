@@ -1,4 +1,4 @@
-# Android Bootstrap Project
+# Android Bootstrap
 This repository is a starter template for creating Android projects, preconfigured with modern libraries and best practices to streamline development. The goal is to reduce setup time for new projects and provide a robust starting point that aligns with contemporary Android development standards.
 ## Table of Contents
 - [Features](#features)
