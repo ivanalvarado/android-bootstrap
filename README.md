@@ -58,10 +58,8 @@ This repository is a starter template for creating Android projects, preconfigur
    ```bash
    git clone https://github.com/yourusername/android-bootstrap-project.git
    ```
-**Open in Android Studio**:
-Open the project in Android Studio and sync Gradle files.
-**Run the App**:
-Build and run the app on an emulator or a physical device.
+- **Open in Android Studio**: Open the project in Android Studio and sync Gradle files.
+- **Run the App**: Build and run the app on an emulator or a physical device.
 ### Project Structure
 This project follows the MVVM architecture pattern:
 - **Model**: Data classes, repositories, and data sources (local and remote).
