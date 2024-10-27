@@ -1,27 +1,75 @@
-# Android Bootstrap
-Android Bootstrap is an Android project with some of the most popular Android libraries already included, as well as, dependency injection set up with Dagger. This is intended to help you save time so that you can start writing features ASAP.
-
-## Compatibility
-```gradle
-compileSdkVersion 28
-minSdkVersion 22
-targetSdkVersion 28
-```
-
-## Libraries
-- [ConstraintLayout](https://developer.android.com/training/constraint-layout): Allows you to create large and complex layouts with a flat view hierarchy (no nested view groups).
-- [Dagger](https://github.com/google/dagger): A fast dependency injector for Android and Java.
-- [DaggerAndroid](https://developer.android.com/training/dependency-injection/dagger-android)
-- [Dagger AssistedInject](https://github.com/square/AssistedInject): Manually injected dependencies for your JSR 330 configuration.
-- [Epoxy](https://github.com/airbnb/epoxy): Epoxy is an Android library for building complex screens in a RecyclerView.
-- [Espresso](https://developer.android.com/training/testing/espresso): Library that helps write Android UI tests.
-- [Lifecycle Components](https://developer.android.com/jetpack/androidx/releases/lifecycle): ViewModel & LiveData help perform actions in response to a change in the lifecycle status of another component, such as activities and fragments.
-- [Lottie](https://airbnb.io/lottie/#/README): Lottie is a library for Android, iOS, Web, and Windows that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile and on the web.
-- [MvRx](https://github.com/airbnb/MvRx): MvRx provides a framework that makes Android screens, from the simplest to the most complex, easier to write.
-- [OkHttp](https://square.github.io/okhttp/): Networking library.
-- [Picasso](https://square.github.io/picasso/): An image downloading and caching library for Android.
-- [Retrofit](https://square.github.io/retrofit/): A type-safe HTTP client for Android and Java.
-- [Room](https://developer.android.com/training/data-storage/room/index.html): Provides an abstraction layer over SQLite to allow fluent database access with SQLite.
-- [RxBinding](https://github.com/JakeWharton/RxBinding): RxJava binding APIs for Android's UI widgets.
-- [RxJava](https://github.com/ReactiveX/RxJava): Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.
-- [RxKotlin](https://github.com/ReactiveX/RxKotlin): RxJava bindings for Kotlin.
+# Android Bootstrap Project
+This repository is a starter template for creating Android projects, preconfigured with modern libraries and best practices to streamline development. The goal is to reduce setup time for new projects and provide a robust starting point that aligns with contemporary Android development standards.
+## Table of Contents
+[Features](#features)
+[Included Libraries](#included-libraries)
+[Getting Started](#getting-started)
+[Architecture](#architecture)
+[Contributing](#contributing)
+[License](#license)
+## Features
+**Kotlin First**: All code is written in Kotlin to leverage its modern, concise syntax and compatibility with Android libraries.
+**Jetpack Libraries**: Includes essential Jetpack components to support modern Android development.
+**Dependency Injection**: Uses Hilt for streamlined dependency management.
+**Network Ready**: Retrofit and OkHttp for efficient networking and API requests.
+**Coroutines for Async Programming**: Integrated with coroutines to handle asynchronous tasks seamlessly.
+**Material Design**: Preconfigured Material Components to achieve a polished, consistent UI.
+**Image Loading**: Coil for easy image loading and caching.
+**Test Suite**: Set up with essential libraries for unit and UI testing.
+**Best Practices**: Architected for scalability and readability, with a focus on MVVM.
+## Included Libraries
+### Core Libraries
+**Kotlin Standard Library**: Leverages idiomatic Kotlin for cleaner, safer code.
+**Coroutines**: Manages background threads and async operations.
+### UI & Jetpack Components
+**Jetpack Compose**: For building UI in a declarative way.
+**Navigation Component**: Simplifies navigation between screens.
+**Lifecycle Components**: Manages UI lifecycle states.
+**Paging**: For efficient pagination of data.
+### Networking & Data
+**Retrofit**: HTTP client for API calls.
+**OkHttp**: Lower-level HTTP client for advanced networking capabilities.
+**Moshi**: JSON parser optimized for Kotlin.
+**Room**: Database management with SQLite abstraction.
+**DataStore**: Lightweight, key-value storage solution.
+### Dependency Injection
+**Hilt**: Simplifies dependency injection.
+### UI and Image Loading
+**Material Components**: UI components adhering to Material Design.
+**Coil**: Fast, modern image loading library.
+### Testing
+**JUnit**: Standard unit testing framework.
+**Mockk**: Mocking library for Kotlin.
+**Espresso**: UI testing for Android.
+**Truth**: Provides readable assertions for tests.
+### Utilities
+**Timber**: Flexible logging.
+**LeakCanary**: Memory leak detection.
+**Firebase Analytics**: Tracks user events and app usage.
+**WorkManager**: Manages background tasks with lifecycle awareness.
+## Getting Started
+### Prerequisites
+**Android Studio** Arctic Fox or later
+**Gradle 8.0+**
+**Minimum SDK**: 21
+**Target SDK**: Latest stable release
+### Installation
+**Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/android-bootstrap-project.git
+   ```
+**Open in Android Studio**:
+Open the project in Android Studio and sync Gradle files.
+**Run the App**:
+Build and run the app on an emulator or a physical device.
+### Project Structure
+This project follows the MVVM architecture pattern:
+**Model**: Data classes, repositories, and data sources (local and remote).
+**ViewModel**: Business logic and data transformation.
+**View**: UI components and views, built with Jetpack Compose.
+## Contributing
+Contributions are welcome! Please submit a pull request with a clear description of your changes, and ensure all tests pass before submitting.
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
+This README should provide a clear overview of the project, setup instructions, and information on included libraries. Adjust the URLs and structure as needed based on your specific setup.
