@@ -112,6 +112,8 @@ dependencies {
     implementation libs.androidx.activity.ktx
     implementation libs.androidx.fragment.ktx
 
+    implementation libs.moshi
+
     implementation libs.timber
 
     testImplementation libs.truth
