@@ -79,6 +79,10 @@ dependencies {
     // MvRx
     implementation libs.airbnb.mvrx
 
+    // Kotlin Coroutines
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+
     // OkHttp - https://square.github.io/okhttp/
     implementation libs.okhttp3.okhttp
     implementation libs.okhttp3.logging.interceptor
