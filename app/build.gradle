@@ -113,6 +113,7 @@ dependencies {
     implementation libs.androidx.fragment.ktx
 
     implementation libs.moshi
+    implementation libs.moshi.kotlin
 
     implementation libs.timber
 
