@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.ivanalvarado.template'
-    compileSdkVersion 30
+    compileSdkVersion 35
     defaultConfig {
         applicationId "com.ivanalvarado.template"
         minSdkVersion 22
@@ -83,9 +83,6 @@ dependencies {
     implementation libs.okhttp3.okhttp
     implementation libs.okhttp3.logging.interceptor
     implementation libs.conscrypt.android
-
-    // Picasso - https://square.github.io/picasso/
-    implementation libs.picasso
 
     // Retrofit - https://square.github.io/retrofit/
     implementation libs.retrofit
