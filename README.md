@@ -55,7 +55,7 @@ This repository is a starter template for creating Android projects, preconfigur
 ### Installation
 **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/android-bootstrap-project.git
+   git clone https://github.com/ivanalvarado/android-bootstrap-project.git
    ```
 - **Open in Android Studio**: Open the project in Android Studio and sync Gradle files.
 - **Run the App**: Build and run the app on an emulator or a physical device.
