@@ -23,6 +23,7 @@ room = "2.6.1"
 rxbinding = "3.1.0"
 rxjava = "2.2.21"
 rxkotlin = "2.4.0"
+timber = "5.0.1"
 truth = "1.4.4"
 
 [libraries]
@@ -64,4 +65,5 @@ retrofit-adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", 
 rxbinding = { module = "com.jakewharton.rxbinding3:rxbinding", version.ref = "rxbinding" }
 rxbinding-core = { module = "com.jakewharton.rxbinding3:rxbinding-core", version.ref = "rxbinding" }
 rxbinding-appcompat = { module = "com.jakewharton.rxbinding3:rxbinding-appcompat", version.ref = "rxbinding" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
