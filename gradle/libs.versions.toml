@@ -75,4 +75,4 @@ timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
 
 [plugins]
-hilt = { id = "com.google.dagger.hilt.andriod", version.ref = "hilt" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

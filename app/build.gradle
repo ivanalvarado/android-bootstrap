@@ -1,3 +1,7 @@
+plugins {
+    alias libs.plugins.hilt
+}
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -116,6 +120,9 @@ dependencies {
     implementation libs.moshi.kotlin
 
     implementation libs.timber
+
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
     testImplementation libs.truth
 }
