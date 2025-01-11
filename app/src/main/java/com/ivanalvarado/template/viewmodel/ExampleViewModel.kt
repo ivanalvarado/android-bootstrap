@@ -12,6 +12,4 @@ class ExampleViewModel @Inject constructor(private val exampleRepository: Exampl
     init {
 
     }
-
-
 }
