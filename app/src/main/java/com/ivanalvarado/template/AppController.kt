@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import com.ivanalvarado.template.di.component.DaggerAppComponent
 import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
+import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
 
@@ -14,14 +14,11 @@ import javax.inject.Inject
  * This way a DispatchingAndroidInjector is injected which is
  * then returned when an injector for an activity is requested.
  * */
-class AppController : Application(), HasActivityInjector {
+@HiltAndroidApp
+class AppController : Application() {
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
-    override fun activityInjector(): DispatchingAndroidInjector<Activity>? {
-        return dispatchingAndroidInjector
-    }
 
     override fun onCreate() {
         super.onCreate()
