@@ -68,3 +68,5 @@ This project follows the MVVM architecture pattern:
 Contributions are welcome! Please submit a pull request with a clear description of your changes, and ensure all tests pass before submitting.
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
+
+# dummy
