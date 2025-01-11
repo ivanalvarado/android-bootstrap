@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.ivanalvarado.template"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -39,6 +39,10 @@ repositories {
 
 kapt {
     correctErrorTypes = true
+}
+
+hilt {
+    enableAggregatingTask = false
 }
 
 dependencies {
