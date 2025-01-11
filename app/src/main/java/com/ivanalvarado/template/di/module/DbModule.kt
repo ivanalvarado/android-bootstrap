@@ -6,14 +6,16 @@ import com.ivanalvarado.template.database.AppDatabase
 import com.ivanalvarado.template.database.dao.ExampleDao
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
 @Module
+@InstallIn(SingletonComponent::class)
 class DbModule {
 
     @Provides
-    @Singleton
     internal fun provideDatabase(application: Application): AppDatabase {
         return Room.databaseBuilder(
             application, AppDatabase::class.java, "AndroidBootstrap.db"
@@ -21,7 +23,6 @@ class DbModule {
     }
 
     @Provides
-    @Singleton
     internal fun provideExampleDao(appDatabase: AppDatabase): ExampleDao {
         return appDatabase.exampleDao()
     }

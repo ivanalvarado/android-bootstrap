@@ -1,3 +1,7 @@
+plugins {
+    alias libs.plugins.hilt
+}
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -10,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.ivanalvarado.template"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -35,6 +39,10 @@ repositories {
 
 kapt {
     correctErrorTypes = true
+}
+
+hilt {
+    enableAggregatingTask = false
 }
 
 dependencies {
@@ -116,6 +124,9 @@ dependencies {
     implementation libs.moshi.kotlin
 
     implementation libs.timber
+
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
     testImplementation libs.truth
 }

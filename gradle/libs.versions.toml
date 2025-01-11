@@ -15,6 +15,7 @@ conscrypt-android = "2.2.1"
 dagger = "2.51.1"
 dagger-android = "2.51.1"
 dagger-assisted-inject = "0.5.0"
+hilt = "2.51.1"
 kotlin-coroutines = "1.9.0"
 mockito-core = "5.14.1"
 moshi = "1.15.1"
@@ -51,6 +52,8 @@ dagger-android-support = { module = "com.google.dagger:dagger-android-support", 
 dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger-android" }
 assisted-inject-annotations-dagger2 = { module = "com.squareup.inject:assisted-inject-annotations-dagger2", version.ref = "dagger-assisted-inject" }
 assisted-inject-processor-dagger2 = { module = "com.squareup.inject:assisted-inject-processor-dagger2", version.ref = "dagger-assisted-inject" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito-core" }
@@ -70,3 +73,6 @@ rxbinding-core = { module = "com.jakewharton.rxbinding3:rxbinding-core", version
 rxbinding-appcompat = { module = "com.jakewharton.rxbinding3:rxbinding-appcompat", version.ref = "rxbinding" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
+
+[plugins]
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
