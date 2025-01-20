@@ -14,7 +14,6 @@ cardview = "28.0.0"
 conscrypt-android = "2.2.1"
 dagger = "2.51.1"
 dagger-android = "2.51.1"
-dagger-assisted-inject = "0.5.0"
 hilt = "2.51.1"
 kotlin-coroutines = "1.9.0"
 mockito-core = "5.14.1"
@@ -50,8 +49,6 @@ dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = 
 dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "dagger-android" }
 dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "dagger-android" }
 dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger-android" }
-assisted-inject-annotations-dagger2 = { module = "com.squareup.inject:assisted-inject-annotations-dagger2", version.ref = "dagger-assisted-inject" }
-assisted-inject-processor-dagger2 = { module = "com.squareup.inject:assisted-inject-processor-dagger2", version.ref = "dagger-assisted-inject" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }

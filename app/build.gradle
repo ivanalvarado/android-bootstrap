@@ -67,10 +67,6 @@ dependencies {
     implementation libs.dagger.android.support
     kapt libs.dagger.android.processor
 
-    // Dagger AssistedInject - https://github.com/square/AssistedInject
-    compileOnly libs.assisted.inject.annotations.dagger2
-    kapt libs.assisted.inject.processor.dagger2
-
     // Epoxy - https://github.com/airbnb/epoxy
     implementation libs.airbnb.epoxy
     kapt libs.airbnb.epoxy.processor
