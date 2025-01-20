@@ -13,7 +13,6 @@ androidx-test-espresso = "3.6.1"
 cardview = "28.0.0"
 conscrypt-android = "2.2.1"
 dagger = "2.51.1"
-dagger-android = "2.51.1"
 hilt = "2.51.1"
 kotlin-coroutines = "1.9.0"
 mockito-core = "5.14.1"
@@ -46,9 +45,6 @@ espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref =
 cardview = { module = "com.android.support:cardview-v7", version.ref = "cardview" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
-dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "dagger-android" }
-dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "dagger-android" }
-dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger-android" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
