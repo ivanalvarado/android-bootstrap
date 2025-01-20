@@ -1,0 +1,30 @@
+name: build
+
+on:
+  pull_requests:
+    branches:
+      - '**' # Runs on all branches
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run assemble
+        run: ./gradlew assemble
+
+      - name: Run tests
+        if: github.event_name == 'pull_request'
+        run: ./gradlew test
