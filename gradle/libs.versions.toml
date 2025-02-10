@@ -1,7 +1,7 @@
 [versions]
 airbnb-epoxy = "5.1.4"
 airbnb-lottie = "6.6.2"
-airbnb-mvrx = "1.3.0"
+airbnb-mvrx = "1.5.1"
 androidx-appcompat = "1.7.0"
 androidx-core = "1.15.0"
 androidx-constraintlayout = "2.2.0"
