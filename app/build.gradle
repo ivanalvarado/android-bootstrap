@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.ivanalvarado.template"
         minSdkVersion 22
-        targetSdkVersion 33
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,9 +32,8 @@ android {
 }
 
 repositories {
-    mavenCentral()
     google()
-    jcenter()
+    mavenCentral()
 }
 
 kapt {
@@ -61,15 +60,6 @@ dependencies {
     // Dagger - https://github.com/google/dagger
     implementation libs.dagger
     kapt libs.dagger.compiler
-
-    // Dagger Android - https://developer.android.com/training/dependency-injection/dagger-android
-    implementation libs.dagger.android
-    implementation libs.dagger.android.support
-    kapt libs.dagger.android.processor
-
-    // Dagger AssistedInject - https://github.com/square/AssistedInject
-    compileOnly libs.assisted.inject.annotations.dagger2
-    kapt libs.assisted.inject.processor.dagger2
 
     // Epoxy - https://github.com/airbnb/epoxy
     implementation libs.airbnb.epoxy
